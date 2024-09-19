@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="title">Image Segmentation With Flask</h1>
+<form method="POST" action="/" enctype="multipart/form-data">
+    <label for="image">Upload Original Image:</label>
+    <input type="file" id="image" name="image" accept="image/png, image/tiff" class="file-input"><br><br>
+
+    <label for="mask">Upload Mask Image:</label>
+    <input type="file" id="mask" name="mask" accept="image/png, image/tiff" class="file-input"><br><br>
+
+    <button type="submit" class="upload-button">Submit</button>
+</form>
+        
+{% endblock %}
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <title>Image Segmentation</title>
+</head>
+<body>
+    <div class="result-page">
+        <!-- عنوان النتيجة -->
+        <h1 class="title">Result</h1>
+
+        <!-- نوع التصنيف -->
+        <div class="subtitle-container">
+            <h2 class="subtitle">Type of class: <span class="class-type">{{ class_type }}</span></h2>
+        </div>
+
+        <!-- عرض الصورتين: الصورة الأصلية والماسك المتوقع -->
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Segmentation Result">
+        </div>
+    </div>
+</body>
+</html>
